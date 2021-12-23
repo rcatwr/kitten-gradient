@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My first Bulma website</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <section class="hero is-medium is-dark">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <h1 class="title is-1">Color Kittens!</h1>
+              <h2 class="subtitle is-4">
+                Create markup for <br />a gradient background color 🐈
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="app box">
+      <div id="kittenBox"></div>
+      <div id="input-container">
+        <div id="color1">
+          <input type="color" id="c1" value="#0080ff" />
+
+          <!-- <input id="rangeInput" type="range" min="0" max="200" oninput="amount.value=rangeInput.value" />
+    <input id="amount" type="number" value="100" min="0" max="200" oninput="rangeInput.value=amount.value" /> -->
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="70"
+            class="slider"
+            id="a1"
+            oninput="a1Box.value=a1.value"
+          /><input
+            class="input"
+            id="a1Box"
+            type="number"
+            min="0"
+            max="100"
+            value="70"
+            oninput="a1.value=a1Box.value"
+          />%
+        </div>
+        <div id="color2">
+          <input type="color" id="c2" value="#ff0000" />
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="70"
+            class="slider"
+            id="a2"
+            oninput="a2Box.value=a2.value"
+          /><input
+            class="input"
+            id="a2Box"
+            type="number"
+            min="0"
+            max="100"
+            value="70"
+            oninput="a2.value=a2Box.value"
+          />%
+        </div>
+        <div id="dir">
+          <p>Direction</p>
+          <input
+            type="range"
+            min="0"
+            max="360"
+            value="45"
+            class="slider"
+            id="dg"
+            oninput="dgBox.value=dg.value"
+          /><span
+            ><input
+              class="input"
+              id="dgBox"
+              type="number"
+              min="0"
+              max="360"
+              value="45"
+              oninput="dg.value=dgBox.value"
+            />°</span
+          >
+        </div>
+      </div>
+      <textarea
+        class="textarea is-small has-fixed-size"
+        id="markup"
+        value='.your-element{ background-image: linear-gradient(46deg, #0080ffb3,
+        #ff0000b3),url("https://placekitten.com/408/287");}'
+      ></textarea>
+    </div>
+  </body>
+  <script type="text/javascript" src="lib/main.js"></script>
+</html>

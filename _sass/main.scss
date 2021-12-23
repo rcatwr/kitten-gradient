@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+/*
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+$blue: #06bcef;
+// Add pink and its invert
+$pink: #ff8080;
+$pink-invert: #fff;
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $pink;
+$primary-invert: $pink-invert;
+
+// 4. Import the rest of Bulma
+*/
+
+@import "../node_modules/bulma/bulma";
+@import "../node_modules/bulma-slider/src/sass/index.sass";
+
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans&display=swap");
+
+body {
+  font-family: "Open Sans";
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#alpha1,
+#alpha2 {
+  max-width: 2em;
+}
+.title {
+  font-family: "Fredoka One";
+  font-weight: 400;
+  margin: 0;
+}
+.input-container {
+  margin-bottom: 1em;
+}
+.input {
+  width: auto;
+}
+p,
+h1 {
+  margin: 0;
+  color: darkgray;
+}
+p {
+  font-size: 12pt;
+}
+
+#kittenBox {
+  background-image: linear-gradient(45deg, #0080ffb3, #ff0000b3),
+    url("https://placekitten.com/408/287");
+  max-width: 100%;
+  height: 225px;
+}
+.app {
+  margin: 1em auto;
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#color1,
+#color2,
+#dir {
+  width: 100%;
+  display: flex;
+  direction: row;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#dir {
+  justify-content: space-around;
+}
+
+textarea {
+  width: 100%;
+  font-size: 8pt;
+}
+
+#a1Box,
+#a2Box,
+#dgBox {
+  max-width: 80px;
+}
+
+@media only screen and (min-width: 400px) {
+  body {
+    flex-direction: row;
+  }
+}
